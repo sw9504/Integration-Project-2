@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">segundoParcialLauria</string>
+    <string name="txtRecovery"><u>Password recovery.</u></string>
+    <string name="txtCreateAcc"><u>Create Account.</u></string>
 </resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.utn.segundoparciallauria.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_createAccFragment"
+            app:destination="@id/createAccFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_recoveryFragment"
+            app:destination="@id/recoveryFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_bthFragment"
+            app:destination="@id/bthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccFragment"
+        android:name="com.utn.segundoparciallauria.fragments.CreateAccFragment"
+        android:label="fragment_create_acc"
+        tools:layout="@layout/fragment_create_acc" />
+    <fragment
+        android:id="@+id/recoveryFragment"
+        android:name="com.utn.segundoparciallauria.fragments.RecoveryFragment"
+        android:label="fragment_recovery"
+        tools:layout="@layout/fragment_recovery" />
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.utn.segundoparciallauria.fragments.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" />
+    <fragment
+        android:id="@+id/bthFragment"
+        android:name="com.utn.segundoparciallauria.fragments.BthFragment"
+        android:label="fragment_bth"
+        tools:layout="@layout/fragment_bth" />
+    <fragment
+        android:id="@+id/avatarFragment"
+        android:name="com.utn.segundoparciallauria.fragments.AvatarFragment"
+        android:label="fragment_avatar"
+        tools:layout="@layout/fragment_avatar" />
+</navigation>
