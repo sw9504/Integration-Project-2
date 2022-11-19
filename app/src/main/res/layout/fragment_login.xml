@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.LoginFragment">
 
-
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="wrap_content"
@@ -19,18 +18,6 @@
         app:layout_constraintVertical_bias="0.675"
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
-    <EditText
-        android:id="@+id/txtUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="User input"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline5" />
-
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
@@ -40,52 +27,87 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPass" />
+        app:layout_constraintTop_toBottomOf="@+id/mPassword" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
+ <androidx.constraintlayout.widget.Guideline
+     android:id="@+id/guideline3"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="438dp"
+     android:orientation="horizontal"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintGuide_end="184dp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mMail"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="438dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_end="159dp"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:layout_constraintBottom_toTopOf="@+id/mPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="246dp"
-        android:layout_marginBottom="485dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_end="374dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Email."
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:helperText="Input valid email."
+        app:helperTextEnabled="false"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_email"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/txtPass"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Password input"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
+        android:hint="Password."
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="8"
+        app:endIconMode="password_toggle"
+        app:helperText="Input valid password."
+        app:helperTextEnabled="false"
+        app:startIconDrawable="@drawable/ic_password"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUser" />
+        app:layout_constraintTop_toBottomOf="@id/mMail"
+        >
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="80dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+ <androidx.constraintlayout.widget.Guideline
+     android:id="@+id/guideline5"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="246dp"
+     android:layout_marginBottom="485dp"
+     android:orientation="horizontal"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintGuide_end="547dp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
+
+ <androidx.constraintlayout.widget.Guideline
+     android:id="@+id/guideline6"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     app:layout_constraintGuide_end="66dp" />
 
     <TextView
         android:id="@+id/txtRecovery"
@@ -109,5 +131,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtRecovery" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
