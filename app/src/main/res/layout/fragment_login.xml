@@ -57,8 +57,7 @@
         app:helperText="Input valid email."
         app:helperTextEnabled="false"
         app:endIconMode="clear_text"
-        app:startIconDrawable="@drawable/ic_email"
-        >
+        app:startIconDrawable="@drawable/ic_email" >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
