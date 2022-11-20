@@ -1,24 +1,25 @@
 package com.utn.segundoparciallauria.activities
 
+import android.bluetooth.BluetoothManager
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
+import androidx.activity.OnBackPressedCallback
+import androidx.navigation.findNavController
 import com.ekn.gruzer.gaugelibrary.Range
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.ingenieriajhr.blujhr.BluJhr
 import com.utn.segundoparciallauria.R
+import com.utn.segundoparciallauria.fragments.LoginFragmentDirections
 import kotlinx.android.synthetic.main.activity_bth.*
 
 class BthActivity : AppCompatActivity() {
-    private lateinit var navHostFragment : NavHostFragment
-    private lateinit var bottomNavView : BottomNavigationView
+
     lateinit var blue : BluJhr
     var measCount : Int = 0
     var devicesBluetooth = ArrayList<String>()
@@ -56,6 +57,12 @@ class BthActivity : AppCompatActivity() {
 
         blue = BluJhr(this)
         blue.onBluetooth()
+
+        btnBack.setOnClickListener {
+            this.onBackPressed()
+            //blue.updateStateConnectBluetooth(BluJhr.Connected.Disconnect)
+            blue.closeConnection()
+        }
 
         listDeviceBluetooth.setOnItemClickListener { adapterView, view, i, l ->
             if (devicesBluetooth.isNotEmpty()) {

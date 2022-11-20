@@ -7,12 +7,19 @@
     tools:context=".activities.BthActivity"
     android:orientation="vertical">
 
-    <ListView
+    <Button
+        android:id="@+id/btnBack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#050505"
+        android:text="Go Back" />
+
+    <ListView
         android:id="@+id/listDeviceBluetooth"
-        android:visibility="visible"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
     </ListView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
