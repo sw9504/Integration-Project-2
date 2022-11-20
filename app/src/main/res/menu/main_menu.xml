@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:title="BTH"
-        android:id="@+id/bthFragment"
+        android:id="@+id/bthActivity"
         android:icon="@drawable/bluetooth"/>
     <item
         android:title="My List"

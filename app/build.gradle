@@ -1,9 +1,13 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+
     //Bottom bar nav
     id 'androidx.navigation.safeargs.kotlin'
     id 'com.google.gms.google-services'
+
+    //Added for bth
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -56,5 +60,11 @@ dependencies {
 
     //Material design
     implementation 'com.google.android.material:material:1.7.0'
+
+    // Bluetooth jhr library
+    implementation 'com.github.jose-jhr:blueJhrLibrary:0.1.0'
+
+    // Simple gauges
+    implementation 'com.github.Gruzer:simple-gauge-android:0.3.1'
 
 }
