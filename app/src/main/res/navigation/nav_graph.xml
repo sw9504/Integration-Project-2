@@ -33,7 +33,11 @@
         android:id="@+id/listFragment"
         android:name="com.utn.segundoparciallauria.fragments.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_expandedFragment"
+            app:destination="@id/expandedFragment" />
+    </fragment>
     <fragment
         android:id="@+id/avatarFragment"
         android:name="com.utn.segundoparciallauria.fragments.AvatarFragment"
@@ -56,4 +60,9 @@
         android:name="com.utn.segundoparciallauria.activities.BthActivity"
         android:label="activity_bth"
         tools:layout="@layout/activity_bth" />
+    <fragment
+        android:id="@+id/expandedFragment"
+        android:name="com.utn.segundoparciallauria.fragments.ExpandedFragment"
+        android:label="fragment_expanded"
+        tools:layout="@layout/fragment_expanded" />
 </navigation>

@@ -2,6 +2,6 @@ package com.utn.segundoparciallauria.viewmodels
 
 import androidx.lifecycle.ViewModel
 
-class ListViewModel : ViewModel() {
-
+class ExpandedViewModel : ViewModel() {
+    // TODO: Implement the ViewModel
 }
