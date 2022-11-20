@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="33dp" />
+        app:layout_constraintGuide_begin="98dp" />
 
     <ImageView
         android:id="@+id/imgLogo"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="167dp" />
+        app:layout_constraintGuide_begin="227dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputName"
@@ -129,5 +129,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="41dp" />
+        app:layout_constraintGuide_end="52dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
