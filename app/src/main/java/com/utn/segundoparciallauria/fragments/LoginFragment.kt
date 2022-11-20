@@ -27,10 +27,8 @@ class LoginFragment : Fragment() {
 
         binding = FragmentLoginBinding.inflate(inflater,container,false)
 
-        /*
         val view = requireActivity().findViewById<BottomNavigationView>(R.id.bottomBar)
         view.visibility = View.INVISIBLE
-        */
 
         return binding.root
     }
@@ -39,7 +37,7 @@ class LoginFragment : Fragment() {
         super.onStart()
 
         binding.btnLogin.setOnClickListener {
-            val action = LoginFragmentDirections.actionLoginFragmentToBthActivity()
+            val action = LoginFragmentDirections.actionLoginFragmentToSelectorFragment()
             findNavController().navigate(action)
         }
 

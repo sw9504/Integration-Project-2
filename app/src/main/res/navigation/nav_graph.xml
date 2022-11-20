@@ -16,8 +16,8 @@
             android:id="@+id/action_loginFragment_to_recoveryFragment"
             app:destination="@id/recoveryFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_bthActivity"
-            app:destination="@id/bthActivity" />
+            android:id="@+id/action_loginFragment_to_selectorFragment"
+            app:destination="@id/selectorFragment" />
     </fragment>
     <fragment
         android:id="@+id/createAccFragment"
@@ -39,6 +39,18 @@
         android:name="com.utn.segundoparciallauria.fragments.AvatarFragment"
         android:label="fragment_avatar"
         tools:layout="@layout/fragment_avatar" />
+    <fragment
+        android:id="@+id/selectorFragment"
+        android:name="com.utn.segundoparciallauria.fragments.SelectorFragment"
+        android:label="fragment_selector"
+        tools:layout="@layout/fragment_selector" >
+        <action
+            android:id="@+id/action_selectorFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_selectorFragment_to_bthActivity"
+            app:destination="@id/bthActivity" />
+    </fragment>
     <activity
         android:id="@+id/bthActivity"
         android:name="com.utn.segundoparciallauria.activities.BthActivity"
